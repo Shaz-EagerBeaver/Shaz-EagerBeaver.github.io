@@ -18,6 +18,16 @@
   <meta name = "description" cotent = " Realtime transport timetable for the La trobe Glider">
   <meta name="keywords" content = "Realtime, La trobe Glider, Staff, Students, Community">
   <script src="./assets/clock.js"></script>
+  <script>
+  // See http://www.backalleycoder.com/2016/05/13/sghpa-the-single-page-app-hack-for-github-pages/
+  (function(){
+    var redirect = sessionStorage.redirect;
+    delete sessionStorage.redirect;
+    if (redirect && redirect != location.href) {
+      history.replaceState(null, null, redirect);
+    }
+  })();
+</script>
   <!-- <script src="app/map/map.js"></script> -->
 <link href="styles.d41d8cd98f00b204e980.bundle.css" rel="stylesheet"/></head>
 <body>
